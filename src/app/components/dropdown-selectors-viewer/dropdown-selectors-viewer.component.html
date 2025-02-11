@@ -1,0 +1,33 @@
+<div class="container my-4">
+    <!-- Row for State & Document Selectors -->
+    <div class="row justify-content-center">
+        <!-- State Selector -->
+        <div class="col-12 col-md-5 mb-3">
+            <div class="card shadow-sm p-3">
+                <label for="state" class="fw-bold">State Selector</label>
+                <select class="form-select mt-2" name="state" [(ngModel)]="selectedState" (change)="onStateChange()">
+                    <option value="" disabled selected>Select a State</option>
+                    <option *ngFor="let state of stateData" [value]="state">{{ state }}</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Document Selector -->
+        <div class="col-12 col-md-5 mb-3">
+            <div class="card shadow-sm p-3">
+                <label for="document" class="fw-bold">Document Selector</label>
+                <select class="form-select mt-2" name="document" [(ngModel)]="selectedDocument" (ngModelChange)="onDocumentChange()">
+                    <option value="" disabled selected>Select a Document</option>
+                    <option *ngFor="let document of documentData" [ngValue]="document">{{ document.title }}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Show Document Button -->
+    <!-- <div class="text-center mt-3">
+        <button class="btn btn-primary px-4 py-2" [disabled]="!selectedDocument.title" (click)="showDocumentfun()">
+            Show Document
+        </button>
+    </div> -->
+</div>

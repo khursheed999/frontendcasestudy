@@ -1,0 +1,9 @@
+.my-component {
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.848);
+
+}
+
+.my-component :hover{
+    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.848);
+    background-color:red;
+}
